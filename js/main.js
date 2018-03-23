@@ -38,6 +38,6 @@ var item = {
 	old_ie_color: '#ffffff', //ie低版兼容色,不能与网页背景相同,默认黑色 
 }
 $('.barrage-content').barrager(item);
-// setInterval(function () {
-// 	$('.barrage-content').barrager(item);
-// }, 1200)
+setInterval(function () {
+	$('.barrage-content').barrager(item);
+}, 1200)

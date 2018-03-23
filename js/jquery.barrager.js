@@ -59,16 +59,16 @@
 
 		var i = 0;
 		div_barrager.css('margin-right', 0);
-		div_barrager.css('right', -104);
+		// div_barrager.css('right', -232);
 
 		var barrage1 = $('.barrage_box')
 		var heightBar1 = window.innerWidth - 40
 		barrage1.css("width", heightBar1 + "px");
 		// barrage.speed
-		// $(id).animate({right:this_width},Math.floor(Math.random() * (8-4.5) + 4.5)*1000,function(){
+		$(id).animate({right:this_width},Math.floor(Math.random() * (8-4.5) + 4.5)*1000,function(){
 
-		// 	$(id).remove();
-		// });
+			$(id).remove();
+		});
 
 		div_barrager_box.mouseover(function () {
 			$(id).stop(true);
