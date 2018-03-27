@@ -1,36 +1,58 @@
-html, body, .main{
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
+html,body,.main{width:100%;height:100%;overflow:hidden}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 fieldset,img{border:0}
 table{border-collapse:collapse;border-spacing:0}
 li{list-style:none}
-a,a:hover{text-decoration:none;color:#ffe400;}
-html,body{ height: 100%;}
-body{line-height:1.5;font-size:12px;font-family:"hiragino sans gb",Arial;color:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0)} 
-.dotstyle{position: absolute;top: 3%;width: 100%; z-index: 1; text-align: center;line-height: 0;}
-.wrap{position:relative;color:#fff; height: 100%; overflow: hidden;}
-.item, .item .item-box {width: 100%;height: 100%;overflow: hidden;}
-.item-1 {background: #FAD75E;}
-.item-2 {background: #349b66;}
-.item-3 {background: #e05365;}
-.item-4 {background: #44a7cb;}
-.item-5 {background: #fc9590;}
-.item-6 {background: #d487b4;}
-.typed-style{position: absolute;top: 6%;font-size: 30px;left: 5%;font-weight: 500;}
-.barrage{position: fixed;bottom:70px;right:-500px;display: inline-block;width: 500px;z-index: 99999}
-.barrage_box{background-color: rgba(0,0,0,.9);padding-right: 8px; height: 150px;display: inline-block;transition: all .3s;}
-.barrage_box .portrait{ display: inline-block;margin-top: 4px; margin-left: 4px; width: 32px;height: 32px;border-radius: 50%;overflow: hidden;}
-.barrage_box .portrait img{width: 100%;height: 100%;}
-.barrage_box div.p a{ margin-right: 2px; font-size: 14px;color: #fff;line-height: 40px;margin-left: 18px; }
-.barrage_box div.p a:hover{text-decoration: underline;}
-.barrage_box .close{visibility: hidden;opacity: 0; text-align: center; width:25px;height: 25px;margin-left: 20px;border-radius: 50%;background:rgba(255,255,255,.1);margin-top:8px; background-image: url(close.png);}
-.barrage_box:hover .close{visibility:visible;opacity: 1;}
-.barrage_box .close a{display:block;}
-.barrage_box .close .icon-close{font-size: 14px;color:rgba(255,255,255,.5);display: inline-block;margin-top: 5px; }
-.barrage .z {float: left !important;}
-.barrage  a{text-decoration:none;}
-.barrage-content{position: absolute;top: 18%;font-size: 30px;font-weight: 500;border: 1px solid black; width: 100%;}
+a,a:hover{text-decoration:none;color:#fff}
+body{line-height:1.5;font-size:12px;font-family:"hiragino sans gb",Arial;color:#fff;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+.dotstyle{position:absolute;top:3%;width:100%;z-index:1;text-align:center;line-height:0}
+.wrap{position:relative;color:#fff;height:100%;overflow:hidden}
+.item,.item .item-box{width:100%;height:100%;overflow:hidden}
+.item-1{background-image:url('../img/item1/background.jpg');background-repeat:no-repeat;background-size:cover}
+.item-logo{width:100%;position:relative;top:9%;text-align:center}
+.item-title{width:100%;position:relative;top:5%;text-align:center}
+.item-title img{width:100%}
+.item-discription{width:100%;position:relative;text-align:right}
+.item-2{background-image:url('../img/item2/background.png');background-repeat:no-repeat;background-size:cover}
+.item2-title{position:relative;text-align:center;top:7%}
+.item2-details{text-align:center;position:relative;top:10%}
+.item-3{background-image:url('../img/item3/background.png');background-repeat:no-repeat;background-size:cover}
+.item-4{background:#FAD75E}
+.typed-style{position:absolute;top:6%;font-size:30px;left:5%;font-weight:500}
+.pet-btn{position:absolute;bottom:15%;width:100%}
+.barrage{position:fixed;bottom:70px;right:-500px;display:inline-block;width:500px;z-index:99999}
+.barrage_box{background-color:#fff;transition:all .3s;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:5px;opacity:.8;box-shadow:2px 2px 8px #888888;border-radius:5px}
+.barrage_box div.p{width:100%;height:100%}
+.barrage_box div.f{display:flex;flex-direction:column;justify-content:space-between;align-items:center}
+.barrage_box div.t{width:100%;height:100%;color:#3d3d3d;letter-spacing:.5px;font-size:13px;display:flex;align-items:center}
+.barrage_box div.t span{margin:0 5px}
+.barrage_box .t-i{border-radius:50%}
+.barrage_box .t p{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.barrage_box div.t img{vertical-align:text-bottom}
+.barrage_box div.m{width:100%;height:100%;color:#888;font-size:12px;display:flex;flex-direction:column;justify-content:space-between}
+.barrage_box div.g{width:100%;height:100%;color:#888;font-size:12px;display:flex}
+.barrage_box div.g div{flex:1;margin-left:5px}
+.barrage_box div.g div:first-child{margin-left:0}
+.barrage_box div.g div:last-child{margin-right:0}
+.barrage_box div.g div:nth-child(1){background-size:cover;background-repeat:no-repeat;background-position:center}
+.barrage_box div.g div:nth-child(2){background-size:cover;background-repeat:no-repeat;background-position:center}
+.barrage_box div.g div:nth-child(3){background-size:cover;background-repeat:no-repeat;background-position:center}
+.barrage_box .portrait{display:inline-block;margin-top:4px;margin-left:4px;width:32px;height:32px;border-radius:50%;overflow:hidden}
+.barrage_box .portrait img{width:100%;height:100%}
+.barrage_box div.p a{margin-right:2px;font-size:14px;color:#fff;margin-left:18px}
+.barrage_box div.p a:hover{text-decoration:underline}
+.barrage_box .close{visibility:hidden;opacity:0;text-align:center;width:25px;height:25px;margin-left:20px;border-radius:50%;background:rgba(255,255,255,.1);margin-top:8px;background-image:url(close.png)}
+.barrage_box:hover .close{visibility:visible;opacity:1}
+.barrage_box .close a{display:block}
+.barrage_box .close .icon-close{font-size:14px;color:rgba(255,255,255,.5);display:inline-block;margin-top:5px}
+.barrage  a{text-decoration:none}
+.barrage-content{position:absolute;top:18%;font-size:30px;font-weight:500;width:100%}
+.pet-btn .all{float:right;width:140px;height:45px;line-height:45px;margin-right:-18px;border-radius:20px;font-size:16px;color:#3d3d3d;-moz-box-shadow:2px 2px 8px #888888;box-shadow:2px 2px 8px #888888;background-color:#fff}
+.pet-btn .all:hover{transition:.1s ease-in;-webkit-transition:.1s ease-in;-moz-transition:.1s ease-in;-o-transition:.1s ease-in;-ms-transition:.1s ease-in}
+.btn{display:inline-block;margin-bottom:0;font-weight:400;text-align:center;vertical-align:middle;-ms-touch-action:manipulation;touch-action:manipulation;cursor:pointer;background-image:none;border:1px solid transparent;white-space:nowrap;padding:2px 12px;font-size:14px;line-height:1.42857;border-radius:4px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.item-logo{animation-duration:3s !important;animation-delay:.3s}
+.item-title{animation-duration:3s !important;animation-delay:.7s}
+.item-discription{animation-duration:3s !important;animation-delay:1.1s}
+.item2-title{animation-duration:3s !important;animation-delay:.3s}
+.item2-details{animation-duration:3s !important;animation-delay:.7s}
