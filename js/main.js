@@ -22,6 +22,7 @@ var myslider = new iSlider({
 					dot[index].className = 'current'
 				}
 			});
+			clearInterval(list);
 		} else if (index == 1) {
 			$('.item2-title').animateCss('animated fadeIn');
 			$('.item2-details').animateCss('animated fadeIn');
@@ -31,6 +32,7 @@ var myslider = new iSlider({
 					dot[index].className = 'current'
 				}
 			});
+			clearInterval(list);
 		} else if (index == 2) {
 			$('.item2-title').animateCss('animated fadeIn');
 			$('.item2-details').animateCss('animated fadeIn');
@@ -40,6 +42,7 @@ var myslider = new iSlider({
 					dot[index].className = 'current'
 				}
 			});
+			clearInterval(list);
 		} else if (index == 3) {
 			dot.forEach(function (item, idx) {
 				if (idx !== index) {
