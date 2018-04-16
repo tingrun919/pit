@@ -1,9 +1,16 @@
+/*
+ * @Author: tarn.tianrun 
+ * @Date: 2018-03-28 14:15:35 
+ * @Last Modified by:   tarn.tianrun 
+ * @Last Modified time: 2018-03-28 14:15:35 
+ */
 /*!
  *@name     jquery.barrager.js
  *@version  1.1
  *@author   yaseng@uauc.net
  *@url      https://github.com/yaseng/jquery.barrager.js
  */
+
 (function ($) {
 
 	$.fn.barrager = function (barrage) {

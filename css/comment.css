@@ -1,14 +1,13 @@
-html,body,.com-main{width:100%;height:100%;overflow-y: auto;overflow-x: hidden;}
+/*
+ * @Author: tarn.tianrun 
+ * @Date: 2018-03-28 14:14:58 
+ * @Last Modified by: tarn.tianrun
+ * @Last Modified time: 2018-03-28 14:20:44
+ */
+
+html,body,.com-main{width:100%;height:100%;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
 .com-main{background: #EDF0F6;height: 100%;}
-.page{
-	text-align: right;
-	width: 100%;
-	color: #3d3d3d;
-	font-size: 14px;
-}
-.page img{vertical-align: middle;}
+.page{text-align: center;width: 100%;color: #3399FF;font-size: 14px;padding: 10px 0;}
 .page span{vertical-align: middle;padding: 0 5px;}
-/* .page img:nth-child(1){padding-left: 30px} */
-.page img:nth-child(3){padding-right: 10px}

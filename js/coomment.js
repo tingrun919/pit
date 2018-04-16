@@ -1,3 +1,10 @@
+/*
+ * @Author: tarn.tianrun 
+ * @Date: 2018-03-28 14:15:23 
+ * @Last Modified by:   tarn.tianrun 
+ * @Last Modified time: 2018-03-28 14:15:23 
+ */
+
 var page1 = 1;
 var size1 = 10;
 function getComment(page, size) {
@@ -10,10 +17,10 @@ function getComment(page, size) {
 		type: "get",
 		url: 'http://myyouta.com/mzXL/Order/showCommentToAll?userid=' + userid + '&token=' + token + '&pageNum=' + pageNum + '&pageSize=' + pageSize + '',
 		success: function (data) {
-			// console.log(data.data, '1')
-			if(data.code == 100003){
+			if (data.code == 100003) {
+				$(".more")[0].innerHTML = "没有更多啦!"
 				alert("已经是最后一页啦！")
-			}else{
+			} else {
 				addPage(data.data)
 			}
 
@@ -26,24 +33,13 @@ $(document).ready(function () {
 	getComment(page1, size1);
 })
 
-function addPage(result){
-	for(var i = 0; i<result.length; i++){
+function addPage(result) {
+	for (var i = 0; i < result.length; i++) {
 		addChild(result[i])
-		if(i+1 == result.length){
+		if (i + 1 == result.length) {
 			var page = $("<div class='page'></div>").appendTo($(".com-main"));
-			var img_t1 = $("<img src='' width='30' height='30'>").appendTo(page);
-			img_t1.attr('src', './img/left.png');
-			img_t1.click(function(){
-				if(page1 == 1){
-					alert("已经是第一页啦！")
-				}else{
-					getComment(page1 - 1, size1)
-				}
-			})
-			$("<span>"+page1+"</span>").appendTo(page);
-			var img_t2 = $("<img src='' class='t-i' width='30' height='30'>").appendTo(page);
-			img_t2.attr('src', './img/right.png');
-			img_t2.click(function(){
+			var more = $("<span class='more'>加载更多评论</span>").appendTo(page);
+			more.click(function () {
 				page1 = page1 + 1
 				getComment(page1, size1)
 			})
@@ -52,29 +48,15 @@ function addPage(result){
 }
 
 function addChild(result) {
-	if(page1 > 1){
+	if (page1 > 1) {
 		$(".page").remove();
 	}
 	var time = new Date().getTime();
 	var barrager_id = 'barrage_' + time;
 	var id = '#' + barrager_id;
 	var div_barrager = $("<div class='' id='" + barrager_id + "'></div>").appendTo($(".com-main"));
-	// var window_height = $(window).height() - 100;
-	// var this_height = (window_height > this.height()) ? this.height() : window_height;
-	// var window_width = $(window).width() + 500;
-	// var this_width = (window_width > this.width()) ? this.width() : window_width;
-	// var bottom = (barrage.bottom == 0) ? Math.floor(Math.random() * this_height + 40) : barrage.bottom;
-	// div_barrager.css("bottom", bottom + "px");
-	// var bottom = (barrage.bottom == 0) ? Math.floor(Math.random() * (window.innerHeight / 5 * 3 - window.innerHeight / 5) + window.innerHeight / 5) : barrage.bottom;
-	// div_barrager.css("bottom", bottom + "px");
 	div_barrager.css("margin", 10 + "px");
 	div_barrager_box = $("<div class='barrage_box cl'></div>").appendTo(div_barrager);
-	// if (barrage.img) {
-
-	// 	div_barrager_box.append("<a class='portrait z' href='javascript:;'></a>");
-	// 	var img = $("<img src='' >").appendTo(id + " .barrage_box .portrait");
-	// 	img.attr('src', barrage.img);
-	// }
 	var infoid = 'info_' + time
 	var imgid = 'img_' + time
 	var info_id = '#' + infoid
@@ -90,7 +72,6 @@ function addChild(result) {
 	var infot = '#t_' + infoid
 	var t = $("<div class='t'  id='t_" + infoid + "'></div>").appendTo(info_id);
 	var img_t = $("<img src='' class='t-i' width='30' height='30'>").appendTo(infot);
-	// img_t.attr('src', result.userTouXiang);
 	img_t.attr('src', result.userTouXiang);
 	img_t.error(function () {
 		img_t.attr('src', './img/userIcon.png');

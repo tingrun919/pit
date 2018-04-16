@@ -1,0 +1,60 @@
+html, body {
+	position: relative;
+	height: 100%;
+	overflow-y:auto;
+	overflow-x:hidden;
+	-webkit-overflow-scrolling:touch;
+  }
+  body {
+	background: #eee;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color:#000;
+	margin: 0;
+	padding: 0;
+  }
+  .main {
+	width: 100%;
+	height: 100%;
+  }
+  .main-swipe{
+	  /* position: absolute; */
+	  width: 100%;
+	  height: auto;
+	  margin-bottom: 5px;
+  }
+  .main-swipe img{
+	  width: 100%;
+	  height: auto;
+  }
+  .swiper-container {
+	width: 100%;
+	height: 100%;
+  }
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+  .main-content {
+	  width: 100%;
+	  height: auto;
+  }
+  .main-content img{
+	width: 100%;
+	height: auto;
+  }
